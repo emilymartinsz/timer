@@ -1,5 +1,5 @@
-# Meu timer
+# Timer
 
-Um timer simples para acompanhar o tempo no seu ritmo. Dá para iniciar, pausar e zerar quando quiser.
+Timer feito do zero com HTML, CSS e JavaScript.
 
-O projeto foi feito com HTML, CSS e JavaScript, sem precisar instalar nada. Para usar, é só abrir o arquivo `index.html` no navegador.
+Você pode acessar o timer pelo [GitHub Pages](https://emartinsz.github.io/timer/).
