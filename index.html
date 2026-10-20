@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <title>Meu timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <span class="etiqueta">FOCO NO AGORA</span>
+            <h1>Meu timer</h1>
+            <p class="descricao">Um segundo de cada vez. Você está no controle.</p>
+        </header>
+
+        <section class="painel-timer" aria-label="Cronômetro">
+            <p class="timer" role="timer" aria-label="Tempo decorrido" aria-live="off">00:00:00</p>
+            <p class="status" data-state="pronto" aria-live="polite">
+                <span class="status-indicador" aria-hidden="true"></span>
+                <span class="status-texto">Pronto para começar</span>
+            </p>
+        </section>
+
+        <div class="controles" role="group" aria-label="Controles do timer">
+            <button class="botao botao-iniciar iniciar" type="button">
+                <span class="icone" aria-hidden="true">▶</span>
+                Iniciar
+            </button>
+            <button class="botao botao-pausar pausar" type="button">
+                <span class="icone" aria-hidden="true">Ⅱ</span>
+                Pausar
+            </button>
+            <button class="botao botao-zerar zerar" type="button">
+                <span class="icone" aria-hidden="true">↺</span>
+                Zerar
+            </button>
+        </div>
+
+        <footer class="rodape">Seu tempo, no seu ritmo.</footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

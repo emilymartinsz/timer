@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 24px;
+    color: #f4f7fb;
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(25, 171, 157, 0.2), transparent 34%),
+        radial-gradient(ellipse at 90% 85%, rgba(71, 104, 204, 0.2), transparent 35%),
+        #101827;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.container {
+    width: min(100%, 480px);
+    padding: 42px;
+    overflow: hidden;
+    background: rgba(24, 36, 53, 0.9);
+    border: 1px solid rgba(210, 226, 242, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(16px);
+}
+
+.cabecalho {
+    text-align: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #72d9ca;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+    font-weight: 650;
+    letter-spacing: -0.045em;
+}
+
+.descricao {
+    margin: 10px 0 0;
+    color: #9eacbd;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.painel-timer {
+    margin: 32px 0 24px;
+    padding: 28px 12px 22px;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(11, 21, 34, 0.9), rgba(20, 34, 49, 0.9));
+    border: 1px solid rgba(190, 211, 229, 0.08);
+    border-radius: 20px;
+}
+
+.timer {
+    margin: 0;
+    color: #f5fbff;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 14px 0 0;
+    color: #9eacbd;
+    font-size: 0.85rem;
+}
+
+.status-indicador {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    background: #8290a1;
+    border-radius: 50%;
+}
+
+.status[data-state="executando"] .status-indicador {
+    background: #55d6a4;
+    box-shadow: 0 0 12px rgba(85, 214, 164, 0.75);
+    animation: pulsar 1.6s ease-in-out infinite;
+}
+
+.status[data-state="pausado"] .status-indicador {
+    background: #f2bd65;
+}
+
+.controles {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 10px;
+}
+
+.botao {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 12px;
+    color: #dce5ef;
+    background: #26374b;
+    border: 1px solid rgba(213, 228, 243, 0.1);
+    border-radius: 12px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.botao-iniciar {
+    color: #09251e;
+    background: #71ddbd;
+    border-color: transparent;
+}
+
+.botao-iniciar:hover {
+    background: #8ce9cd;
+}
+
+.botao-pausar:hover,
+.botao-zerar:hover {
+    background: #31465e;
+    border-color: rgba(213, 228, 243, 0.22);
+}
+
+.botao:active {
+    transform: translateY(1px);
+}
+
+.botao:focus-visible {
+    outline: 3px solid #8ce9cd;
+    outline-offset: 3px;
+}
+
+.icone {
+    font-size: 0.85em;
+}
+
+.rodape {
+    margin-top: 26px;
+    color: #78889b;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@keyframes pulsar {
+    50% {
+        opacity: 0.55;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 30px 22px;
+        border-radius: 22px;
+    }
+
+    .controles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
