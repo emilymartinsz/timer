@@ -2,7 +2,7 @@
 
 Fiz esse timer do zero com HTML, CSS e JavaScript. A ideia é ter uma forma simples de acompanhar o tempo, com opções para iniciar, pausar e zerar.
 
-Você pode testar por aqui: [abrir o timer](https://emartinsz.github.io/timer/)
+Você pode testar por aqui: [abrir o timer](https://emilymartinsz.github.io/timer/)
 
 ## Como usar
 
